@@ -1,7 +1,17 @@
 backend:
   name: git-gateway
 
-media_folder: "site/static/img" # Folder where user uploaded files should go
+publish_mode: editorial_workflow
+
+# Folder where user uploaded files should go
+media_library:
+  name: uploadcare
+  config:
+    multiple: true
+    previewStep: true
+    clearable: true
+    publicKey: 32ca2fde06dae2725b55
+
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
@@ -13,8 +23,10 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Molecule", name: "molecule", widget: "text", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Uploadcare", name: "fileInfo", widget: "uploadcare"}
   - name: "pages"
     label: "Pages"
     files:

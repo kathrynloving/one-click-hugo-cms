@@ -1,5 +1,14 @@
 import React from "react";
 import CMS from "netlify-cms";
+import uploadcare from "uploadcare-netlifycms";
+
+// Allow file upload to Explorable Labs
+uploadcare({
+  effectsTab: true,
+  widgetOptions: {
+    publickey: "32ca2fde06dae2725b55"
+  }
+})
 
 import HomePreview from "./cms-preview-templates/home";
 import PostPreview from "./cms-preview-templates/post";

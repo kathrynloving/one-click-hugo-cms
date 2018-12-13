@@ -4,12 +4,13 @@
     <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
     <div class="flex justify-between grey-3">
       <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ .ReadingTime }} minutes</p>
     </div>
     <div class="cms mw6">
       <p>{{ .Description }}</p>
+      {{ if .Params.molecule }}<canvas width="200" height="200" data-smiles="{{ .Params.molecule }}"></canvas>{{ end }}
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
     </div>
   </div>
+
 {{ end }}
