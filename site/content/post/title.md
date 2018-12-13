@@ -3,6 +3,7 @@ title: title
 date: 2018-12-13T18:32:40.912Z
 description: intro
 molecule: CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+image: 'https://ucarecdn.com/953953ab-50b0-404c-bc30-eca76d0cc347/'
 fileInfo:
   cdnUrl: 'https://ucarecdn.com/eb587bdf-d7ec-484c-aa63-862d777691dd~2/'
   count: 2
