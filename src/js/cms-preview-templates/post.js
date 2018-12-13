@@ -18,10 +18,11 @@ export default class PostPreview extends React.Component {
       </div>
       <div className="cms mw6">
         <p>{ entry.getIn(["data", "description"]) }</p>
-        { molecule && <canvas width="200" height="200" data-smiles={ molecule }></canvas> }
-        { image && <img src={ image } alt={ entry.getIn(["data", "title"])} /> }
-        { widgetFor("body") }
+        <p>{ molecule && <canvas width="200" height="200" data-smiles={ molecule }></canvas> }</p>
+        <p>{ image && <img src={ image } alt={ entry.getIn(["data", "title"])} /> }</p>
+        <p>{ widgetFor("body") }</p>
       </div>
+      <p>{ fileInfo.cdnUrl && <a href={ fileInfo.cdnUrl }>uploaded file(s)</a>}</p>
     </div>;
   }
 }

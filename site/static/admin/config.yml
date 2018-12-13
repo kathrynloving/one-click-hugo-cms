@@ -7,9 +7,6 @@ publish_mode: editorial_workflow
 media_library:
   name: uploadcare
   config:
-    multiple: true
-    previewStep: true
-    clearable: true
     publicKey: 32ca2fde06dae2725b55
 
 public_folder: "img"
@@ -26,7 +23,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Molecule", name: "molecule", widget: "text", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Uploadcare", name: "fileInfo", widget: "uploadcare"}
+      - {label: "Uploadcare", name: "fileInfo", widget: "uploadcare", options: { multiple: true, clearable: true }}
   - name: "pages"
     label: "Pages"
     files:

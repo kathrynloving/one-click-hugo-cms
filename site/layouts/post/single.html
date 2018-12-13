@@ -11,6 +11,6 @@
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
     </div>
+    <p>{{ if .Params.fileInfo.cdnUrl }}<a href={{.Params.fileInfo.cdnUrl}}>uploaded file(s)</a>{{ end }}</p>
   </div>
-
 {{ end }}
