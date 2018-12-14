@@ -12,5 +12,6 @@ fileInfo:
   name: 1 file
   size: 317
   uuid: 8962a653-c1e6-4b2b-b149-7b98ad3b4feb~1
+hpa_gene: MKI67
 ---
 body text
